@@ -9,7 +9,7 @@ jobs:
         environment:
             TERRAFORM_VERSION: 0.11.1
             TERRAFORM_PROJECT: "hello_world"
-            ECR_REPOSITORY_NAME: "api-hello-world"
+            ECR_REPOSITORY_NAME: "python-flask-docker-hello-world"
             DEVOPS_CI_VERSION: "1.0.21"
     steps:
 
