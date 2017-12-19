@@ -10,7 +10,7 @@ jobs:
             TERRAFORM_VERSION: 0.11.1
             TERRAFORM_PROJECT: "hello_world"
             ECR_REPOSITORY_NAME: "api-hello-world"
-            DEVOPS_CI_VERSION: "1.0.20"
+            DEVOPS_CI_VERSION: "1.0.21"
     steps:
 
       # checkout the files from github
@@ -28,7 +28,7 @@ jobs:
           command: |
             mkdir -p ~/.bin
             echo 'export PATH=${PATH}:${HOME}/.bin' >> $BASH_ENV
-          
+
 
       - setup_remote_docker:
           version: 17.06.0-ce
