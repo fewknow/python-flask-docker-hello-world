@@ -30,7 +30,7 @@ locals {
 
   # Cluster name to deploy the service to. Ask DevOps if you don't know.
   # Options are: api / web / pm_pro_enterprise / pm_pro_enterprise_web/\
-  cluster_name                     = "tool"
+  cluster_name                     = "api"
 
   # The port your container is listening for traffic on
   container_port                   = 5000
