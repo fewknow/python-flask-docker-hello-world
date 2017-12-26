@@ -43,6 +43,8 @@ jobs:
 
             if [ $CIRCLE_BRANCH = 'develop' ]; then
               DEPLOY_ENV=development
+              AWS_KEY=$dev_acces_key
+              AWS_SECRET=$dev_secret_key 
               AUTO_DEPLOY=true
             else
               # there is no corresponding terraform env for PR builds
@@ -93,4 +95,4 @@ jobs:
             cd .ci
             echo 'CIRCLE_PROJECT_REPONAME is ${CIRCLE_PROJECT_REPONAME}'
             chmod +x go.sh
-            ./go.sh "$CIRCLE_PROJECT_REPONAME" "$CIRCLE_SHA1" "$CIRCLE_BRANCH" "$CIRCLE_BUILD_NUM" "$DEPLOY_ENV" "$TERRAFORM_VERSION" "$TERRAFORM_PROJECT" "$ECR_REPOSITORY_NAME" "$dev_acces_key" "$dev_secret_key" "default_service" "cpu_autoscaling"
+            ./go.sh "$CIRCLE_PROJECT_REPONAME" "$CIRCLE_SHA1" "$CIRCLE_BRANCH" "$CIRCLE_BUILD_NUM" "$DEPLOY_ENV" "$TERRAFORM_VERSION" "$TERRAFORM_PROJECT" "$ECR_REPOSITORY_NAME" "$AWS_KEY" "$AWS_SECREY" "default_service" "cpu_autoscaling"
