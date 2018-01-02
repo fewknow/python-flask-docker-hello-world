@@ -10,7 +10,7 @@ jobs:
             TERRAFORM_VERSION: 0.11.1
             TERRAFORM_PROJECT: "python_hello_world"
             ECR_REPOSITORY_NAME: "python-flask-docker-hello-world"
-            DEVOPS_CI_VERSION: "1.0.48"
+            DEVOPS_CI_VERSION: "1.0.50"
     steps:
 
       # checkout the files from github
